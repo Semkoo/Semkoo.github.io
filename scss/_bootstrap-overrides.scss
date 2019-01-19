@@ -6,6 +6,22 @@
   color: $primary !important;
 }
 
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  border-color: darken($primary, 15%) !important;
+  background-color: darken($primary, 15%) !important;
+  color: white !important;
+}
+
+.btn-primary {
+  color: $white !important;
+  border-color: $primary !important;
+  background-color: $primary !important;
+}
+
+
 a {
   color: $primary;
   &:hover,

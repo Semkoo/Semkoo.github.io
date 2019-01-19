@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Resume v5.0.2 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2018 Start Bootstrap
+ * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
@@ -181,6 +181,21 @@ section.resume-section .resume-item .resume-date {
 
 .text-primary {
   color: #BD5D38 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  border-color: #824027 !important;
+  background-color: #824027 !important;
+  color: white !important;
+}
+
+.btn-primary {
+  color: #fff !important;
+  border-color: #BD5D38 !important;
+  background-color: #BD5D38 !important;
 }
 
 a {
