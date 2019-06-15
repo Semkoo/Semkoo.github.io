@@ -40,11 +40,15 @@ gulp.task("vendor", function(done) {
       "!./node_modules/jquery/dist/core.js"
     ])
     .pipe(gulp.dest("./vendor/jquery"));
-
-  // jQuery Easing
+  // jQueryUI
   gulp
-    .src(["./node_modules/jquery.easing/*.js"])
-    .pipe(gulp.dest("./vendor/jquery-easing"));
+    .src(["./node_modules/jquery-ui-dist/*"])
+    .pipe(gulp.dest("./vendor/jqueryui"));
+
+  // // jQuery Easing
+  // // gulp
+  // //   .src(["./node_modules/jquery.easing/*.js"])
+  // //   .pipe(gulp.dest("./vendor/jquery-easing"));
   done();
 });
 
