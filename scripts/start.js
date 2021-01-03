@@ -1,24 +1,36 @@
-const concurrently = require('concurrently');
-const path = require('path');
+/** @format */
 
-const browserSyncPath = path.resolve(path.dirname(__filename), '../node_modules/.bin/browser-sync');
+const concurrently = require("concurrently");
+const path = require("path");
 
-concurrently([
-    { command: 'node scripts/sb-watch.js', name: 'SB_WATCH', prefixColor: 'bgBlue.bold' },
+const browserSyncPath = path.resolve(
+  path.dirname(__filename),
+  "../node_modules/.bin/browser-sync"
+);
+
+concurrently(
+  [
     {
-        command: `"${browserSyncPath}" --reload-delay 2000 --reload-debounce 2000 dist -w --no-online`,
-        name: 'SB_BROWSER_SYNC',
-        prefixColor: 'bgGreen.bold',
-    }
-], {
-    prefix: 'name',
-    killOthers: ['failure', 'success'],
-}).then(success, failure);
+      command: "node scripts/sb-watch.js",
+      name: "SB_WATCH",
+      prefixColor: "bgBlue.bold",
+    },
+    {
+      command: `"${browserSyncPath}" --reload-delay 2000 --reload-debounce 2000 gh-pages -w --no-online`,
+      name: "SB_BROWSER_SYNC",
+      prefixColor: "bgGreen.bold",
+    },
+  ],
+  {
+    prefix: "name",
+    killOthers: ["failure", "success"],
+  }
+).then(success, failure);
 
 function success() {
-    console.log('Success');
+  console.log("Success");
 }
 
 function failure() {
-    console.log('Failure');
+  console.log("Failure");
 }

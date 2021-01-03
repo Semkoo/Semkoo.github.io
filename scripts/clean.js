@@ -1,7 +1,8 @@
-const sh = require('shelljs');
-const path = require('path');
+/** @format */
 
-const destPath = path.resolve(path.dirname(__filename), '../dist');
+const sh = require("shelljs");
+const path = require("path");
 
-sh.rm('-rf', `${destPath}/*`)
+const destPath = path.resolve(path.dirname(__filename), "../gh-pages");
 
+sh.rm("-rf", `${destPath}/*`);
