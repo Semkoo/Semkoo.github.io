@@ -12,7 +12,7 @@ const sh = require("shelljs");
 const stylesPath = "../src/scss/styles.scss";
 const destPath = path.resolve(
   path.dirname(__filename),
-  "../gh-pages/css/styles.css"
+  "../dist/css/styles.css"
 );
 
 module.exports = function renderSCSS() {

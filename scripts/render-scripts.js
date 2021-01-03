@@ -13,7 +13,7 @@ module.exports = function renderScripts() {
   );
   const destPath = path.resolve(
     path.dirname(__filename),
-    "../gh-pages/js/scripts.js"
+    "../dist/js/scripts.js"
   );
 
   const copyright = `/*!

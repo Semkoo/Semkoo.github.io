@@ -9,7 +9,7 @@ const prettier = require("prettier");
 
 module.exports = function renderPug(filePath) {
   const destPath = filePath
-    .replace(/src\/pug\//, "gh-pages/")
+    .replace(/src\/pug\//, "dist/")
     .replace(/\.pug$/, ".html");
   const srcPath = path.resolve(path.dirname(__filename), "../src");
 
